@@ -4,26 +4,6 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 
 const AddAccountPage = () => {
-  const [formData, setFormData] = useState({
-    Name: '',
-    NumberOfItems: '',
-    PurhaseDate: '',
-    UnitPrice: '',
-    type: 'Good'
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
 
   return (
     <div className="min-h-screen">
@@ -42,7 +22,7 @@ const AddAccountPage = () => {
                   <h2 className="text-xl font-medium">Account</h2>
                 </div>
                 
-                <form onSubmit={handleSubmit} className="w-[500px]">
+                <form  className="w-[500px]">
                   <div className="space-y-5">
                     <div>
                       <input
@@ -50,8 +30,6 @@ const AddAccountPage = () => {
                         name="firstName"
                         placeholder="First Name"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.Name}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -61,8 +39,6 @@ const AddAccountPage = () => {
                         name="lastName"
                         placeholder="Last Name"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.NumberOfItems} 
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -72,8 +48,6 @@ const AddAccountPage = () => {
                         name="email"
                         placeholder="Email ID"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.PurhaseDate}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -83,8 +57,6 @@ const AddAccountPage = () => {
                         name="password"
                         placeholder="Password"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.UnitPrice}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -97,8 +69,6 @@ const AddAccountPage = () => {
                             type="radio"
                             name="type"
                             value="Good"
-                            checked={formData.type === 'Good'}
-                            onChange={handleChange}
                             className="mr-2"
                           />
                           Good
@@ -108,8 +78,6 @@ const AddAccountPage = () => {
                             type="radio"
                             name="type"
                             value="Damaged"
-                            checked={formData.type === 'Damaged'}
-                            onChange={handleChange}
                             className="mr-2"
                           />
                           Bad
@@ -122,7 +90,6 @@ const AddAccountPage = () => {
 
               <div className="mt-10 flex justify-center">
                 <button
-                  onClick={handleSubmit}
                   className="w-64 bg-customBlue text-white py-1 text-3xl rounded-full px-12"
                 >
                   Register

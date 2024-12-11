@@ -1,33 +1,9 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
-import Sidebar from '../components/Sidebar';
+import React, { useState } from "react";
+import Sidebar from "../components/Sidebar";
 
 const AddAccountPage = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    gender: '',
-    age: '',
-    type: 'Admin'
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
   return (
     <div className="min-h-screen">
       <div className="flex">
@@ -35,17 +11,19 @@ const AddAccountPage = () => {
         <div className="flex-1 bg-gray-50">
           <div className="max-w-5xl mx-auto p-8">
             <div className="bg-white rounded-lg shadow-md p-12">
-            <div className="text-center mb-12">
-                <h1 className="text-5xl text-customBlue font-semibold mb-6">Add Account</h1>
+              <div className="text-center mb-12">
+                <h1 className="text-5xl text-customBlue font-semibold mb-6">
+                  Add Account
+                </h1>
                 <div className="w-full border-b border-gray-300"></div>
               </div>
-              
+
               <div className="flex justify-center gap-32">
                 <div className="w-40 pt-1">
                   <h2 className="text-xl font-medium">Account</h2>
                 </div>
-                
-                <form onSubmit={handleSubmit} className="w-[500px]">
+
+                <form className="w-[500px]">
                   <div className="space-y-5">
                     <div>
                       <input
@@ -53,8 +31,6 @@ const AddAccountPage = () => {
                         name="firstName"
                         placeholder="First Name"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.firstName}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -64,8 +40,6 @@ const AddAccountPage = () => {
                         name="lastName"
                         placeholder="Last Name"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.lastName}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -75,8 +49,6 @@ const AddAccountPage = () => {
                         name="email"
                         placeholder="Email ID"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.email}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -86,8 +58,6 @@ const AddAccountPage = () => {
                         name="password"
                         placeholder="Password"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.password}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -97,8 +67,6 @@ const AddAccountPage = () => {
                         name="confirmPassword"
                         placeholder="Confirm Password"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.confirmPassword}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -108,8 +76,6 @@ const AddAccountPage = () => {
                         name="gender"
                         placeholder="Gender"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.gender}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -119,8 +85,6 @@ const AddAccountPage = () => {
                         name="age"
                         placeholder="Age"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.age}
-                        onChange={handleChange}
                       />
                     </div>
 
@@ -132,8 +96,6 @@ const AddAccountPage = () => {
                             type="radio"
                             name="type"
                             value="Admin"
-                            checked={formData.type === 'Admin'}
-                            onChange={handleChange}
                             className="mr-2"
                           />
                           Admin
@@ -143,8 +105,6 @@ const AddAccountPage = () => {
                             type="radio"
                             name="type"
                             value="Employee"
-                            checked={formData.type === 'Employee'}
-                            onChange={handleChange}
                             className="mr-2"
                           />
                           Employee
@@ -156,10 +116,7 @@ const AddAccountPage = () => {
               </div>
 
               <div className="mt-10 flex justify-center">
-                <button
-                  onClick={handleSubmit}
-                  className="w-64 bg-customBlue text-white py-1 text-3xl rounded-full px-12"
-                >
+                <button className="w-64 bg-customBlue text-white py-1 text-3xl rounded-full px-12">
                   Register
                 </button>
               </div>

@@ -4,7 +4,7 @@ import { Home, Package, Users, FileText } from 'lucide-react';
 
 const Sidebar = () => {
   const menuItems = [
-    { icon: <Home size={20} />, label: 'Home', href: '/' },
+    { icon: <Home size={20} />, label: 'Home', href: '/login' },
     { icon: <Package size={20} />, label: 'Inventory', href: '/DataAssetUser' },
     { icon: <Users size={20} />, label: 'All Account', href: '/HakAkses' },
     { icon: <FileText size={20} />, label: 'Transactions', href: '#' },

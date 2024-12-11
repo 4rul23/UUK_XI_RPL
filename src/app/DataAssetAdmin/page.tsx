@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 const InventoryPage = () => {
   const inventory = [
-    { productName: 'Table', seriesNo: 'TJ0001' },
-    { productName: 'Chair', seriesNo: 'TJ0002' },
-    { productName: 'Laptop', seriesNo: 'TJ0015' },
-    { productName: 'Monitor', seriesNo: 'TJ1212' },
-    { productName: 'Keyboard', seriesNo: 'TJ0021' },
+    { productName: 'Meja', seriesNo: 'TJ0001', category: 'Furniture', condition: 'Terpakai', location: 'Warehouse A' },
+    { productName: 'Kursi', seriesNo: 'TJ0002', category: 'Furniture', condition: 'Terpakai', location: 'Warehouse B' },
+    { productName: 'Laptop', seriesNo: 'TJ0015', category: 'Electronics', condition: 'Baru', location: 'Warehouse C' },
+    { productName: 'Monitor', seriesNo: 'TJ1212', category: 'Electronics', condition: 'Terpakai', location: 'Warehouse A' },
+    { productName: 'Keyboard', seriesNo: 'TJ0021', category: 'Electronics', condition: 'Baru', location: 'Warehouse D' },
   ];
 
   return (
@@ -38,8 +38,8 @@ const InventoryPage = () => {
         <div className="bg-white rounded-lg shadow">
           <table className="w-full pt-4">
             <thead>
-              <tr className="border-b pb-6 bg-slate-300">
-                <th className="px-3 py-3 text-left font-bold text-customBlue"></th>
+              <tr className="border pb-6 bg-slate-300">
+                <th className="px-3 py-3 text-left font-bold text-customBlue "></th>
                 <th className="px-3 py-3 text-left font-bold text-customBlue">Product Name</th>
                 <th className="px-3 py-3 text-left font-bold text-customBlue">Series No.</th>
                 <th className="px-3 py-3 text-left font-bold text-customBlue">Category</th>
@@ -58,9 +58,9 @@ const InventoryPage = () => {
                   </td>
                   <td className="px-3 py-4">{item.productName}</td>
                   <td className="px-3 py-4">{item.seriesNo}</td>
-                  <td className="px-3 py-4"></td>
-                  <td className="px-3 py-4"></td>
-                  <td className="px-3 py-4"></td>
+                  <td className="px-3 py-4">{item.category}</td>
+                  <td className="px-3 py-4">{item.condition}</td>
+                  <td className="px-3 py-4">{item.location}</td>
                 </tr>
               ))}
             </tbody>

@@ -25,24 +25,24 @@ const UserPage = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow">
-          <table className="w-full pt-4">
+          <table className="w-full pt-4 rounded-lg">
             <thead>
-              <tr className="border-b pb-6">
-              <th className="px-3 py-1 text-left font-bold text-customBlue"></th>
-              <th className="px-3 py-1 text-left font-bold text-customBlue"></th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Name</th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Access Status</th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Email</th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Age</th>
+              <tr className="border pb-6 bg-slate-300 rounded">
+              <th className="px-3 py-3 text-left font-bold text-customBlue"></th>
+              <th className="px-3 py-3 text-left font-bold text-customBlue"></th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Name</th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Access Status</th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Email</th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Age</th>
               </tr>
             </thead>
             <tbody>
               {users.map((user, index) => (
                 <tr key={index} className="border-b last:border-b-0">
-                  <td className=" py-4">
+                  <td className="px-3 py-4">
                     <Pencil className="cursor-pointer" />  
                   </td>
-                  <td className=" py-4"><Trash2 className="cursor-pointer" /> </td>
+                  <td className="py-4"><Trash2 className="cursor-pointer" /> </td>
                   <td className="px-3 py-4">{user.name}</td>
                   <td className="px-3 py-4">{user.status}</td>
                   <td className="px-3 py-4">{user.email}</td>

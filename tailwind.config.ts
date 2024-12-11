@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         customBlue: "#4796BD", // Added custom color
+        custombackground: "#F3F9FB",
       },
     },
   },
