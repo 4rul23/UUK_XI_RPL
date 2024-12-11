@@ -8,9 +8,9 @@ const Navbar = () => {
         <Image 
           src={Logo}
           alt="Company Logo" 
-          width={100} 
+          width={120} 
           height={100}
-          className="cursor-pointer mx-8"
+          className="cursor-pointer mx-12"
         />
           <ul className='flex p-6 gap-5 text-white font-bold mx-10'>
             <li>Customer</li>

@@ -37,22 +37,22 @@ const InventoryPage = () => {
         <div className="bg-white rounded-lg shadow">
           <table className="w-full pt-4">
             <thead>
-              <tr className="border-b pb-6">
-                <th className="px-3 py-1 text-left font-bold text-customBlue"></th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Product Name</th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Series No.</th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Items</th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Purchase Date</th>
-                <th className="px-3 py-1 text-left font-bold text-customBlue">Unit Price</th>
+              <tr className="border-b pb-6 bg-slate-300 py-6">
+                <th className="px-3 py-3 text-left font-bold text-customBlue"></th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Product Name</th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Series No.</th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Items</th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Purchase Date</th>
+                <th className="px-3 py-3 text-left font-bold text-customBlue">Unit Price</th>
               </tr>
             </thead>
             <tbody>
               {inventory.map((item, index) => (
                 <tr key={index} className="border-b last:border-b-0">
                   <td className="py-4">
-                    <div className="flex items-center space-x-3">
-                      <Pencil className="cursor-pointer" />  
-                      <Trash2 className="cursor-pointer" />
+                  <div className="flex items-center space-x-3">
+                      <Pencil className="cursor-pointer ml-3 mr-6" />  
+                      <Trash2 className="cursor-pointer ml-12" />
                     </div>
                   </td>
                   <td className="px-3 py-4">{item.productName}</td>

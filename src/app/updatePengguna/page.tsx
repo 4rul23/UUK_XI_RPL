@@ -5,14 +5,11 @@ import Sidebar from '../components/Sidebar';
 
 const AddAccountPage = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    gender: '',
-    age: '',
-    type: 'Admin'
+    Name: '',
+    NumberOfItems: '',
+    PurhaseDate: '',
+    UnitPrice: '',
+    type: 'Good'
   });
 
   const handleChange = (e) => {
@@ -36,7 +33,7 @@ const AddAccountPage = () => {
           <div className="max-w-5xl mx-auto p-8">
             <div className="bg-white rounded-lg shadow-md p-12">
             <div className="text-center mb-12">
-                <h1 className="text-5xl text-customBlue font-semibold mb-6">Add Account</h1>
+                <h1 className="text-5xl text-customBlue font-semibold mb-6">Add Product</h1>
                 <div className="w-full border-b border-gray-300"></div>
               </div>
               
@@ -53,7 +50,7 @@ const AddAccountPage = () => {
                         name="firstName"
                         placeholder="First Name"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.firstName}
+                        value={formData.Name}
                         onChange={handleChange}
                       />
                     </div>
@@ -64,7 +61,7 @@ const AddAccountPage = () => {
                         name="lastName"
                         placeholder="Last Name"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.lastName}
+                        value={formData.NumberOfItems} 
                         onChange={handleChange}
                       />
                     </div>
@@ -75,7 +72,7 @@ const AddAccountPage = () => {
                         name="email"
                         placeholder="Email ID"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.email}
+                        value={formData.PurhaseDate}
                         onChange={handleChange}
                       />
                     </div>
@@ -86,43 +83,11 @@ const AddAccountPage = () => {
                         name="password"
                         placeholder="Password"
                         className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.password}
+                        value={formData.UnitPrice}
                         onChange={handleChange}
                       />
                     </div>
 
-                    <div>
-                      <input
-                        type="password"
-                        name="confirmPassword"
-                        placeholder="Confirm Password"
-                        className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.confirmPassword}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    <div>
-                      <input
-                        type="text"
-                        name="gender"
-                        placeholder="Gender"
-                        className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.gender}
-                        onChange={handleChange}
-                      />
-                    </div>
-
-                    <div>
-                      <input
-                        type="number"
-                        name="age"
-                        placeholder="Age"
-                        className="w-full p-3 border border-gray-200 rounded-md bg-gray-100"
-                        value={formData.age}
-                        onChange={handleChange}
-                      />
-                    </div>
 
                     <div className="mt-6">
                       <p className="mb-3 text-gray-700">Type</p>
@@ -131,23 +96,23 @@ const AddAccountPage = () => {
                           <input
                             type="radio"
                             name="type"
-                            value="Admin"
-                            checked={formData.type === 'Admin'}
+                            value="Good"
+                            checked={formData.type === 'Good'}
                             onChange={handleChange}
                             className="mr-2"
                           />
-                          Admin
+                          Good
                         </label>
                         <label className="flex items-center">
                           <input
                             type="radio"
                             name="type"
-                            value="Employee"
-                            checked={formData.type === 'Employee'}
+                            value="Damaged"
+                            checked={formData.type === 'Damaged'}
                             onChange={handleChange}
                             className="mr-2"
                           />
-                          Employee
+                          Bad
                         </label>
                       </div>
                     </div>
